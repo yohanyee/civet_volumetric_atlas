@@ -40,6 +40,7 @@ for sid in sampled_ids:
     output_prefix = os.path.join(args.registration_outdir, 'registrations', sid, '{}_to_template'.format(sid))
     cmd = """/usr/bin/time -v antsRegistration \
 --minc \
+-a 1 \
 -z 1 \
 -d 3 \
 -o {o} \
