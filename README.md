@@ -11,6 +11,8 @@ These scripts require:
 - minc-toolkit-v2
 - ANTs
 - VTK
+- ITK
+- itk-vtkglue
 
 ## Align surfaces to the atlas
 

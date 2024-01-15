@@ -67,9 +67,13 @@ for i in tqdm(range(mesh.GetNumberOfPoints()), desc="Vertex vote"):
     prop_labels.append(prop_label)
 
 # Write out data
+print(f'Writing out label data to {args.output_file}')
 with open(args.output_file, "w") as fconn:
     fconn.write('\n'.join([str(l) for l in voted_labels]))
+    fconn.write('\n')
 
 if args.proportion_file is not None:
+    print(f'Writing out proportion data to {args.proportion_file}')
     with open(args.proportion_file, "w") as fconn:
         fconn.write('\n'.join([str(l) for l in prop_labels]))
+        fconn.write('\n')
